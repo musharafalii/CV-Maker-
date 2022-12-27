@@ -1,4 +1,4 @@
-# CV-Maker-
+# [CV-Maker](https://musharafali07.github.io/CV-Maker-/)
 To create a CV maker using HTML, CSS, and JavaScript, you will need to use these web technologies to build the user interface, style the CV maker, and create the functionality for generating CVs. Here are the general steps you might follow to create a simple CV maker:
 
 - Set up the HTML structure for the CV maker. This will involve creating the necessary HTML elements to define the layout and content of the CV maker.
