@@ -1,0 +1,216 @@
+ <!--Musharaf Ali  -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CV Maker</title>
+</head>
+<style>
+    #cv-maker {
+    border: 4px solid rgb(24, 3, 121);
+}
+
+#cv-tamplate {
+    border: 4px solid rgb(24, 3, 121);
+
+
+}
+
+.myimage {
+    /* border: 2px solid red; */
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.bgcolor {
+    background-color: rgb(24, 3, 121);
+    color: aliceblue;
+}
+
+</style>
+<body>
+    <!-- cv Generator -->
+    <div class="container" id="cv-maker">
+        <h1 class="text-center mt-3 bgcolor">Resume Generator</h1>
+        <p class="text-center">Musharaf Ali</p>
+
+        <div class="row" id="main-container">
+            <!-- left column  -->
+            <div class="col-md-6">
+                <h3>Personal Information </h3>
+                <div class="form-group ">
+                    <label for="nameField"> Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter Here" class="form-control">
+                </div>
+                <div class="form-group ">
+                    <label for="subtitleField"> Your Subtitle</label>
+                    <input type="text" id="subtitleField" placeholder="Enter Here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="contactField"> Your Contact</label>
+                    <input type="text" id="contactField" placeholder="Enter Here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="AddressField"> Your Address</label>
+                    <textarea id="AddressField" placeholder="Enter Here" class="form-control" rows="5"> </textarea>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="file" class=>Select Your Photo</label>
+                    <input type="file" id="image" class="form-control">
+                </div>
+
+
+                <h4 class="text-secondary mt-3">Important links</h4>
+
+                <div class="form-group mt-2">
+                    <label for="FacebookField"> Facebook</label>
+                    <input type="text" id="FacebookField" placeholder="Enter Here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="InstagramField"> Instagram</label>
+                    <input type="text" id="InstagramField" placeholder="Enter Here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkedinField"> LinkedIn</label>
+                    <input type="text" id="linkedinField" placeholder="Enter Here" class="form-control">
+                </div>
+            </div>
+
+            <!-- right column -->
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+                <div class="form-group mt-2">
+                    <label for="AddressField"> Objective</label>
+                    <textarea placeholder="Enter Here" class="form-control" id="objectivesField" rows="5"> </textarea>
+                </div>
+
+
+                <!-- work experience -->
+                <div class="form-group mt-2" id="work-experience">
+                    <label for="AddressField"> Work Experience</label>
+                    <textarea placeholder="Enter Here" class="form-control wefield" rows="3 "> </textarea>
+                    <div class="container text-center mt-2 " id="addbutton1">
+                        <button onclick="addbutton()" class="btn btn-primary btn-sm">ADD</button>
+                    </div>
+                </div>
+
+                <!-- acadmic qualification -->
+                <div class="form-group mt-2" id="aq">
+                    <label for="AddressField"> Academic Qualification </label>
+                    <textarea placeholder="Enter Here" class="form-control eqfield" rows="3"> </textarea>
+                    <div class="container text-center mt-2" id="addbutton2">
+                        <button onclick="addbutton2()" class="btn btn-primary btn-sm">ADD</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container text-center mt-5">
+                <button onclick="generatecv()" class="btn btn-primary btn-lg mb-5">Generate CV </button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- cv template -->
+    <div class="container mt-5" id="cv-tamplate">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 bgcolor">
+                <!-- first column -->
+                <img src="https://www.nicepng.com/png/detail/933-9332131_profile-picture-default-png.png" alt=""
+                    class="img-fluid myimage" id="imgt">
+
+                <div class="container">
+                    <p id="namet1">Musharaf Ali</p>
+                    <p id="contactt">+923300000,935333232</p>
+                    <p id="addresst">Nathoki ,kot rahda kishen, pakistan</p>
+                    <hr>
+
+                    <p><i class="fa-brands fa-facebook"></i> <a id="facebookt"
+                            href="">https://web.facebook.com/mishumano49/</a>
+                    </p>
+                    <p><i class="fa-brands fa-instagram"></i> <a id="instagramt"
+                            href="#2">https://web.Instagram.com/mishumano49/</a>
+                    </p>
+                    <p><i class="fa-brands fa-linkedin"></i> <a id="linkedint" href="#">
+                            https://web.LinkedIn.com/mishumano49/</a>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-8 py-5">
+                <!-- second column -->
+                <h1 id="namet2" class="text-center" style="font-weight:600">Musharaf Ali</h1>
+                <p id="subtitlet" class="text-center" style="font-size:25px">Subtitle</p>
+                <!-- Objectives -->
+                <div class="card mt-3">
+                    <div class="card-header bgcolor">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objecttivet">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, quis! Minus
+                            assumenda
+                            consectetur veniam! Veritatis assumenda ipsam quasi praesentium! Ipsa blanditiis earum
+                            delectus necessitatibus! Saepe nesciunt quaerat non asperiores omnis!</p>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="card mt-3">
+                    <div class="card-header bgcolor">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="wet">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, deleniti.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, deleniti.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, deleniti.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Acadmic  -->
+
+                <div class="card mt-3">
+                    <div class="card-header bgcolor">
+                        <h3>Acadmic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqt">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, deleniti.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, deleniti.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, deleniti.</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- print button -->
+    <div class="container mt-5 mb-5 text-center">
+        <button onclick="printcv()" class="btn bgcolor">Print CV</button>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
